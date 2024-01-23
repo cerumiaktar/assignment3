@@ -16,8 +16,21 @@
     <!-- This is Daisy UI CDN -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.0/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- This is Tailwind Custom Style -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                        'hockey-color': '#FF4240',
+                    }
+                }
+            }
+        }
+    </script>
     <style>
-        .font-family .manrope {
+        .font-manrope {
             font-family: "Manrope", sans-serif;
             font-optical-sizing: auto;
             font-weight: weight;
@@ -27,7 +40,7 @@
 </head>
 
 <body>
-    <header>
+    <header class="container mx-auto">
         <div class="navbar bg-base-100">
             <div class="navbar-start">
                 <div class="dropdown">
@@ -38,8 +51,7 @@
                                 d="M4 6h16M4 12h8m-8 6h16" />
                         </svg>
                     </div>
-                    <ul tabindex="0"
-                        class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                    <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow w-52 font-bold">
                         <li><a>Home</a></li>
                         <li><a>About</a></li>
                         <li><a>Pages</a></li>
@@ -47,26 +59,38 @@
                         <li><a>Contact</a></li>
                     </ul>
                 </div>
-                <a class="btn btn-ghost text-xl">Hockey’s</a>
+                <a class="text-4xl font-extrabold">Hockey<span class="text-red-600">’</span>s</a>
             </div>
             <div class="navbar-center hidden lg:flex">
-                <ul class="menu menu-horizontal px-1">
-                    <li><a>Home</a></li>
+                <ul class="menu menu-horizontal px-1 font-bold">
+                    <li><a class="text-red-600">Home</a></li>
                     <li><a>About</a></li>
                     <li><a>Pages</a></li>
                     <li><a>Blog</a></li>
                     <li><a>Contact</a></li>
                 </ul>
             </div>
-            <div class="navbar-end">
-                <i class="fa-solid fa-magnifying-glass"></i>
-                <a class="btn btn-error text-white">Get Ticket</a>
+            <div class="navbar-end flex items-center gap-4">
+                <i class="fa-solid fa-magnifying-glass hidden lg:flex"></i>
+                <a class="btn bg-hockey-color text-white">Get Ticket</a>
             </div>
         </div>
     </header>
     <main>
+        <!-- This is Carousel Section-->
+        <section class="container mx-auto mt-10">
+            <div class="carousel w-full">
+                <div id="slide1" class="carousel-item relative w-full">
+                    <img src="./Images/1.png" class="w-full" />
+                    <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                        <a href="#slide4" class="btn btn-circle">❮</a>
+                        <a href="#slide2" class="btn btn-circle">❯</a>
+                    </div>
+                </div>
+            </div>
+        </section>
         <!-- This is Client Question -->
-        <section class="my-24 rounded-2xl border border-2 p-8">
+        <section class="container mx-auto mt-20 rounded-2xl border border-2 p-8">
             <div class="mb-6">
                 <h3 class="text-4xl mb-4 font-semibold text-center">Clients Question</h3>
                 <p class="text-center">Your clients want to know that you value them; their needs, their opinions. Your
@@ -144,6 +168,35 @@
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
+        </section>
+        <!-- This is Hockey Club Section -->
+        <section class="container mx-auto mt-20">
+            <div class="mb-6">
+                <h3 class="text-4xl mb-4 font-semibold text-center">Professional Hockeys Club</h3>
+                <p class="text-center">Hockey is the national game of India. Also, it is a popular game and an interesting game that many countries play.</p>
+            </div>
+            <div class="grid grid-cols-1 lg:grid-cols-4 justify-center items-center">
+                <div>
+                    <div class="radial-progress bg-primary text-primary-content border-4 border-primary" style="--value:70;" role="progressbar">70%</div>
+                    <h4>Prayer Facility</h4>
+                    <p>Prayers help you stay grounded, have gratitude and reminds you that you are a part of God and living His values on earth.</p>
+                </div>
+                <div>
+                    <div class="radial-progress bg-primary text-primary-content border-4 border-primary" style="--value:70;" role="progressbar">70%</div>
+                    <h4>Prayer Facility</h4>
+                    <p>Prayers help you stay grounded, have gratitude and reminds you that you are a part of God and living His values on earth.</p>
+                </div>
+                <div>
+                    <div class="radial-progress bg-primary text-primary-content border-4 border-primary" style="--value:70;" role="progressbar">70%</div>
+                    <h4>Prayer Facility</h4>
+                    <p>Prayers help you stay grounded, have gratitude and reminds you that you are a part of God and living His values on earth.</p>
+                </div>
+                <div>
+                    <div class="radial-progress bg-primary text-primary-content border-4 border-primary" style="--value:70;" role="progressbar">70%</div>
+                    <h4>Prayer Facility</h4>
+                    <p>Prayers help you stay grounded, have gratitude and reminds you that you are a part of God and living His values on earth.</p>
                 </div>
             </div>
         </section>
